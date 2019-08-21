@@ -212,7 +212,6 @@ hr{
   flex-basis: 400px;
 }
 
-
 #projects p{
   max-width: 800px;
   text-align: center;
@@ -225,6 +224,14 @@ hr{
   #projects .grid li.small{
     flex-basis: 400px;
   }
+}
+
+.bXmqbP{
+  display: none;
+}
+
+.pTittle{
+  color:white;
 }
 
 /* ***************************
