@@ -1,33 +1,272 @@
-.App {
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color:#555;
+}
+
+a{
+  color:white;
+}
+
+ul{
+  list-style: none;
+}
+
+h3.title{
+  color: #131633;
+  text-transform: capitalize;
+  font-size: 32px;
+  margin-bottom: 35px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+hr{
+  width: 150px;
+  height:2px;
+  background-color: #2196f3;
+  border: 0;
+  margin: 40px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ***************************
+          HEADER
+   *************************** */
+
+   header{
+     background-color: rgba(0,0,0,0.7);
+     position: fixed;
+     z-index: 10;
+     top: 0;
+     left:0;
+     width: 100%;
+     color: #fff;
+     padding: 35px 100px 20px;
+
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+   }
+
+   header a{
+     text-decoration: none;
+     color: white;
+     opacity: .6;
+     cursor: pointer;
+   }
+
+   header a:hover{
+     opacity: 1;
+   }
+
+   header nav ul{
+     font-size: 14px;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+   }
+
+   header nav li{
+     margin: 0 6px;
+   }
+
+   header nav li:first-child{
+     margin-left: 0;
+   }
+
+   header nav li:last-child{
+     margin-right: 0;
+   }
+
+   @media(max-width:1000px) {
+     header{
+       text-align: center;
+       flex-direction: column;
+       padding: 20px 50px;
+     }
+
+     header nav {
+       justify-content: space-around;
+     }
+   }
+
+/* ***************************
+          HERO
+   *************************** */
+
+#hero{
+  background: gray;
+  color: white;
+  text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  background-image: url('./images/bannerSkyline.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+#hero h1, #hero h3{
+  font-size: 28px;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#hero h1{
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+@media(max-width:800px){
+
+  #hero{
+    min-height: 600px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #hero h1{
+    font-size: 36px;
+  }
+  #hero h3 {
+    font-size: 18px;
+  }
+}
+
+/* ***************************
+          About
+   *************************** */
+
+#about {
+  padding: 10px;
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+#two-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  border: 4px solid #2196f3;
+  background-color: #2196f3;
+}
+
+.about-bio {
+  width: 65%;
+  max-width: 800px;
+  line-height: 2;
+  margin-left: 20px;
+}
+
+@media(max-width:800px) {
+  #about, #two-cols {
+    flex-direction: column;
+  }
+  .about-bio {
+    margin-top: 20px;
+    line-height: 1.5;
+    text-align: left;
+    }
+  }
+
+/* ***************************
+          Projects
+*************************** */
+
+#projects{
+  background-color: #fff;
+
+}
+
+#projects .grid li{
+  padding: 20px;
+  height: 350px;
+  border: 4px solid #2196f3;
+  border-radius:  3px;
+  background-clip: content-box;
+  background-size: cover ;
+  background-position: center;
+  background-color: #333;
+}
+
+#projects ul.grid{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#projects .grid li.small{
+  flex-basis: 400px;
+}
+
+
+#projects p{
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto 35px;
+  padding: 0 20px;
+  line-height: 2;
+}
+
+@media(max-width: 800px){
+  #projects .grid li.small{
+    flex-basis: 400px;
+  }
+}
+
+/* ***************************
+          FOOTER
+   *************************** */
+
+footer{
+  background-color: #131622;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to bottom, #284e7a, #000 100%);
+  padding: 60px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p{
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+}
+
+footer ul{
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul li{
+  margin: 0 8px;
+}
+
+footer ul li a{
+  font-size: 36px;
+  cursor: pointer;
+}
+
+@media(max-width:800px) {
+  footer{
+    padding: 80px 15px;
   }
 }
